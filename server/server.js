@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// Cargamos rutas se usuario
-app.use(require('./routes/usuario'));
+// configuración de rutas
+app.use(require('./routes/index'));
 
 // Conectamos con la base de datos
 mongoose.connect(process.env.URLDB, (err, res) => {
